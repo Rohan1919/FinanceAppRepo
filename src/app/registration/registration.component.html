@@ -4,11 +4,11 @@
 
  </div>
     <form style>
-     
+      <form action="home.component.html" >
       <div class="abc">
     <label for="Name"  ><b>Username</b></label><br/></div>
    <div class="container">
-    <input type="text" placeholder="Enter Name" name="Name" required><br/></div>
+    <input type="text" placeholder="Enter Name" name="Name" id="Name" pattern="[A-Za-z]{1,50}" title="enter valid" required><br/></div>
     
     <div class="abc">
       <label for="email"><b>Email</b></label><br/></div>
@@ -41,7 +41,7 @@
     <input type="text" placeholder="Aadhar Card Number" name="adh" required><br/></div>
   
 
-  </form>
+  
 
 <div class="container">
     <hr>
@@ -49,7 +49,8 @@
 
     <button type="submit" class="registerbtn">Register</button><br/>
   </div>
-  
+</form>
+</form>
   <div class="container signin">
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div> 
