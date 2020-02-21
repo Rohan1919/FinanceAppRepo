@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../paymentoptions/user';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { RegService } from '../reg.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  user:User = new User();
+  constructor(private http:HttpClient, private router:Router, private service:RegService) { }
 
   ngOnInit(): void {
+  }
+  registersubmit(){
+    alert(JSON.stringify(this.user));
+    this.service.addUser(this.user);
+    this.router.navigate(['/userlogin']);
   }
 
 }

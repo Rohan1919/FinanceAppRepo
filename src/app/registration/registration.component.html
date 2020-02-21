@@ -6,53 +6,96 @@
     <form style>
       <form action="home.component.html" >
       <div class="abc">
-    <label for="Name"  ><b>Username</b></label><br/></div>
+    <label for="name"  ><b>Username</b></label><br/></div>
    <div class="container">
-    <input type="text" placeholder="Enter Name" name="Name" id="Name" pattern="[A-Za-z]{1,50}" title="enter valid" required><br/></div>
-    
+    <input type="text" placeholder="Enter Name" [(ngModel)]=user.userName #username="ngModel" required name="username" pattern="[A-Za-z]{1,50}"  required><br/></div>
+    <div class="error" *ngIf="username.touched" >
+      <p *ngIf="username.errors?.required">Username required</p>
+
+      <p *ngIf="username.errors?.pattern">Username pattern required</p>
+    </div>
+
     <div class="abc">
       <label for="email"><b>Email</b></label><br/></div>
     <div class="container">
-    <input type="text" placeholder="Enter Phone Number" name="email" required><br/></div>
-   
+    <input type="email" placeholder="Enter mail" [(ngModel)]=user.email #email="ngModel"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required name="email" required><br/></div>
+     
+    <div class="error" *ngIf="email.touched" >
+      <p *ngIf="email.errors?.required">Email required</p>
+
+      <p *ngIf="email.errors?.pattern">Invalid Email Id</p>
+    </div>
+
+
+
     <div class="abc">
     <label for="phno" ><b>Phone Number</b></label><br/></div>
     <div class="container">
-   <input type="number" placeholder="Enter Phone Number" name="phno" required><br/></div>
+   <input type="tel" placeholder="Enter Phone Number" [(ngModel)]=user.phoneNumber #phone="ngModel" required name="phone" pattern="[0-9]{10}" required><br/></div>
+
+   <div class="error" *ngIf="phone.touched" >
+    <p *ngIf="phone.errors?.required">Phone Number required</p>
+
+    <p *ngIf="phone.errors?.pattern">Invalid Phone Number</p>
+  </div>
+
 
    <div class="abc">
-   <label for="psw"><b>Password</b></label><br/></div>
+   <label for="pwd"><b>Password</b></label><br/></div>
    <div class="container">
-    <input type="password" placeholder="Enter Password" name="psw" required><br/></div>
+    <input type="password" placeholder="Enter Password" [(ngModel)]=user.password  #password="ngModel" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required><br/></div>
  
+    <div class="error" *ngIf="password.touched" >
+      <p *ngIf="password.errors?.required">password required</p>
+
+      <p *ngIf="password.errors?.pattern">Must contain at least one number and one uppercase and lowercase letter, and at least 8  characters</p>
+    </div>
+
+
     <div class="abc">
-   <label for="address"><b>Address</b></label><br/></div>
+   <label for="addr"><b>Address</b></label><br/></div>
    <div class="container">
-    <input type="text" placeholder="Enter address" name="address" required><br/></div>
+    <input type="text" placeholder="Enter address" [(ngModel)]=user.address #address="ngModel" required name="address" pattern="[A-Za-z0-9]{10,50}" required><br/></div>
+     
+    <div class="error" *ngIf="address.touched" >
+      <p *ngIf="address.errors?.required">Address required</p>
+
+      <p *ngIf="address.errors?.pattern"></p>
+    </div>
 
     <div class="abc">
     <label for="pan"><b>Pan Card Number</b></label><br/></div>
     <div class="container">
-    <input type="text" placeholder="Pan Card Number" name="pan" required><br/></div>
+    <input type="text" placeholder="Pan Card Number" [(ngModel)]=user.panCardNumber required name="panCardNumber" #pancard="ngModel" pattern="[0-9]{10}" required><br/></div>
+
+    <div class="error" *ngIf="pancard.touched" >
+      <p *ngIf="pancard.errors?.required">pancard Number required</p>
+
+      <p *ngIf="pancard.errors?.pattern">Invalid PanCard format</p>
+    </div>
 
     <div class="abc">
-    <label for="adh"><b>Aadhar Card Number</b></label><br/></div>
+    <label for="aadhar"><b>Aadhar Card Number</b></label><br/></div>
     <div class="container">
-    <input type="text" placeholder="Aadhar Card Number" name="adh" required><br/></div>
+    <input type="text" placeholder="Aadhar Card Number" [(ngModel)]=user.aadharCardNumber required name="aadharCardNumber" #aadhar="ngModel"  pattern="[0-9]{12}" required><br/></div>
   
+    <div class="error" *ngIf="aadhar.touched" >
+      <p *ngIf="aadhar.errors?.required">Aadhar Number required</p>
 
+      <p *ngIf="aadhar.errors?.pattern">Invalid Aadhar card format</p>
+    </div>
   
 
 <div class="container">
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p><br/>
 
-    <button type="submit" class="registerbtn">Register</button><br/>
+    <button type="submit" (click)="registersubmit()" class="registerbtn">Register</button><br/>
   </div>
 </form>
 </form>
   <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
+    <p>Already have an account? <a href="http://localhost:4200/userlogin" >Sign in</a>.</p>
   </div> 
 
 

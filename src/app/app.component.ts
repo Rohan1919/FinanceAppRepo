@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   
 
     
- .header {
+  .header {
    
   overflow: hidden;
   background-color: #f1e571;
@@ -45,26 +45,28 @@ import { Component } from '@angular/core';
 }
 
   </style>
-  <h1 style="text-align:center">Welcome to Akash Finserv</h1>
+  
+ 
+  <h1 style="text-align:center">Welcome to  Fin-Sarv</h1>
   <div class="header">
   <a href="#default" class="logo">CompanyLogo</a>
   <div class="header-right">
     <a href="#home">Home</a>
-    <a routerLink="contact">Contact</a>
+    <a routerLink="contactnow">Contact</a>
     <a href="#about">About</a>
-    <a href="#login">Login</a>
+    <a routerLink="userlogin">Login</a>
     <a routerLink="userregister">Register</a>
-    <a href="#admin">Admin</a>
-  </div>
-  </div>
-  
+    <a href="userlogin" >Admin</a>
+</div>
+
+</div>
+
+<router-outlet></router-outlet> 
+
+   
+
     
- 
-
- 
-    <router-outlet></router-outlet>
-
-  
+    
     
    
   `,

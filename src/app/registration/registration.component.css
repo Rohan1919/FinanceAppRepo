@@ -31,7 +31,7 @@ body {
     display: none;
   }
   /* Full-width input fields */
-   input[type=password], input[type=number] {
+   input[type=password], input[type=number] ,input[type=text],[type=email],[type=tel] {
     width: 30%;
     
     padding: 5px;
@@ -40,17 +40,8 @@ body {
     border-color: rgb(0, 255, 255);
     background: #f1f1f1;
   }
-  input[type=text]{
-    width: 30%;
+  
    
-    padding: 5px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    
-    border-color: rgb(0, 255, 255);
-    background: #f1f1f1;
-
-  }
   input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
@@ -87,4 +78,8 @@ body {
   .signin {
     background-color: #f1f1f1;
     text-align: center;
+  } 
+  .error{
+    text-align: center;
+    color: red;
   }
