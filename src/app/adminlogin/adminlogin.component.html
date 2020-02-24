@@ -1,0 +1,15 @@
+<div class="login" >
+  
+    <div ></div>
+      <div class="login-triangle"></div>
+      
+      <h2 class="login-header">Admin Log in</h2>
+      
+      <form class="login-container">
+       
+        <p>  <input type="text" placeholder="Enter Name" name="Name" id="Name" pattern="[A-Za-z]{1,50}" title="enter valid name" required><br/></p>
+        <p> <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8  characters"  required><br/></p>
+        <p><button (click)="adminpage()" type="submit"  value="Log in" style="margin-left: 40%;">LOGIN</button> </p>
+      </form>
+    </div>
+  

@@ -6,4 +6,6 @@ export class User{
     address:string;
     panCardNumber:string;
     aadharCardNumber:string;
-}
+    name:string;
+    userId:number;
+    }

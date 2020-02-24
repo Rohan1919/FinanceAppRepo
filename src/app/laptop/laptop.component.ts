@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from '../product';
+import { stringify } from '@angular/compiler/src/util';
+import { RegService } from '../reg.service';
 
 @Component({
   selector: 'app-laptop',
@@ -7,13 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./laptop.component.css']
 })
 export class LaptopComponent implements OnInit {
-
-  constructor(private router:Router) { }
-
   ngOnInit(): void {
+    
   }
-  purchase(){
-    this.router.navigate(['purchase'])
-  }
-
-}
+  
+    productId:number;
+    
+     constructor(private service : RegService, private router:Router) { }
+   
+    
+     details(productId){
+      this.router.navigate(['productdetail'])
+    }
+    }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product';
+import { RegService } from '../reg.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emioptions',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emioptions.component.css']
 })
 export class EmioptionsComponent implements OnInit {
+ product:Product=new Product();
+ emioptions; 
+ productId;
+ 
+  constructor(private service : RegService, private router:Router) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.productId=sessionStorage.getItem("productId")
+    this.service.getProduct(this.productId).subscribe((data)=>{
+    console.log(JSON.stringify(data));
+    this.product=data;
+    })
+  }
+  payment(){
 
-  ngOnInit(): void {
+    this.router.navigate(['payment'])
+
   }
 
 }

@@ -53,15 +53,20 @@ import { Component } from '@angular/core';
   <div class="header-right">
     <a href="#home">Home</a>
     <a routerLink="contactnow">Contact</a>
-    <a href="#about">About</a>
-    <a routerLink="userlogin">Login</a>
+    <a href="about">About</a>
+    <a routerLink="userlogin"> Login</a>
     <a routerLink="userregister">Register</a>
-    <a href="userlogin" >Admin</a>
+    <a href="adminlogin" >Admin</a>
 </div>
 
 </div>
 
 <router-outlet></router-outlet> 
+
+
+
+
+
 
    
 

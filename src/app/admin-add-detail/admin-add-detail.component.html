@@ -1,0 +1,46 @@
+
+<body>
+    
+
+<div class="container">
+    <h1>Product Details</h1>
+
+ </div>
+    <form style>
+      <form action="home.component.html" >
+      <div class="abc">
+    <label for="name"  ><b>Product Name</b></label><br/></div>
+<div class="container">
+    <input  type="text"  placeholder="Enter Product Name" [(ngModel)]=product.productName name="productname"  required><br/>
+    </div>  
+   
+
+ 
+      <label class="abc" for="Price"><b>Price</b></label><br/>
+      <div class="container">
+    <input  type="number"  placeholder="Enter Price" [(ngModel)]=product.price  name="Price" required><br/>
+  </div>
+    
+
+
+
+   
+    <label class="abc" for="Details" ><b>Product Details</b></label><br/>
+    <div  class="container">
+   <input  type="text"  placeholder="Enter Product Details" [(ngModel)]=product.productDetails name="Details" required><br/>
+    </div>
+   
+
+
+   
+   <label class="abc" for="url"><b>Image url</b></label><br/>
+   <div  class="container">
+    <input  type="text"  placeholder="Enter Image url" name="url" required><br/>
+    </div>
+    
+<div class="container">
+    <button type="submit" (click)="productsubmit()" class="registerbtn">Submit</button><br/>
+  </div>
+</form>
+</form>
+</body>
