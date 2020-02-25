@@ -4,20 +4,20 @@
   <form class="selectemi"  > 
     <h1>Select EMI Period</h1>
     <div class="price">
-    <label class="container">12 Months for ₹{{product.price/12}}/month</label>
-      <input type="radio" checked="checked" value="12" name="emiMonths">
+    <label class="container">12 Months for ₹{{price/12}}/month</label>
+      <input type="radio" checked="checked"   [(ngModel)]=purchase.tenturePeriod  value="12" name="emiMonths">
       <span class="checkmark"></span>
     
-    <label class="container"> 9 Months for ₹{{product.price/9}}/month</label>
-      <input type="radio" value="9" name="emiMonths" >
+    <label class="container"> 9 Months for ₹{{price/9}}/month</label>
+      <input type="radio" value="9"  [(ngModel)]=purchase.tenturePeriod   name="emiMonths" >
       <span class="checkmark"></span>
     
-    <label class="container">6 Months for ₹{{product.price/6}}/month</label>
-      <input type="radio" value="6" name="emiMonths" >
+    <label class="container">6 Months for ₹{{price/6}}/month</label>
+      <input type="radio" value="6"  [(ngModel)]=purchase.tenturePeriod  name="emiMonths" >
       <span class="checkmark"></span>
     
-    <label class="container">3 Months for ₹{{product.price/3}}/month</label>
-      <input type="radio" value="3" name="emiMonths">
+    <label class="container">3 Months for ₹{{price/3}}/month</label>
+      <input type="radio" value="3"  [(ngModel)]=purchase.tenturePeriod  name="emiMonths">
       <span class="checkmark"></span>
     
   </div>

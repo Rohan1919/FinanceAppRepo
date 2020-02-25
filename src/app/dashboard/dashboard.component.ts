@@ -11,8 +11,10 @@ export class DashboardComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    
   }
 actualpay(){
+  
   this.router.navigate(['actualpay'])
 }
 }

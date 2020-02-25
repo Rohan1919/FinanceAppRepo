@@ -16,8 +16,13 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
   registersubmit(){
-    alert(JSON.stringify(this.user));
-   this.service.addUser(this.user);
-    this.router.navigate(['/userlogin']);
+   // alert(JSON.stringify(this.user));
+   
+   if(this.user.address!=null&&this.user.name!=null&&this.user.email!=null&&this.user.phoneNumber!=null&&this.user.userName!=null&&this.user.password!=null&&this.user.panCardNumber!=null&&this.user.aadharCardNumber!=null&&this.user.cardType!=null)
+   {this.service.addUser(this.user); 
+   this.router.navigate(['/userlogin']);
+   }
+    else
+    alert("enter fields")
   }
 }

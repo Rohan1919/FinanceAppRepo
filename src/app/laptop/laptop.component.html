@@ -1,4 +1,38 @@
 
+
+
+<div *ngFor="let product of productList">
+  
+  <div class="row">
+    <div class="column" >
+      <div class="card" style="text-align:center;">
+        <img src="assets/lap4.jpeg" style="width:100%">
+        <h3 style="text-align: center;">{{product.pname}}</h3>
+        <p class="price">Rs{{product.price}}</p>
+        <p>{{product.productDetails}}</p>
+  
+      <p><button (click)="details(product.productId)">View Product</button></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <body>
     <h1 style="text-align:center; background-color: white;">Laptops</h1>
   
@@ -62,4 +96,5 @@
                         <p><button (click)="details(18)" >View Product</button></p>
          </div>
       </div>
-    </div>
+    </div> 
+  -->

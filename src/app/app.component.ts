@@ -47,9 +47,9 @@ import { Component } from '@angular/core';
   </style>
   
  
-  <h1 style="text-align:center">Welcome to  Fin-Sarv</h1>
+  <h1 style="text-align:center">Welcome to  Fin-Serv</h1>
   <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
+  <a href="#default" class="logo">Fin-Serv</a>
   <div class="header-right">
     <a href="#home">Home</a>
     <a routerLink="contactnow">Contact</a>

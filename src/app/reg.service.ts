@@ -4,6 +4,8 @@ import { User } from './user';
 import { Product } from './product';
 import { LoginComponent } from './login/login.component';
 import { Login } from './Login';
+import { Schedules } from './Schedules';
+import { Purchase } from './purchase';
 
 
 @Injectable({
@@ -21,23 +23,25 @@ export class RegService {
   }
 
 
-
+  CommanUrl:String="http://192.168.13.241:8282/financeproject";
   
-  getProduct(productId:number){
+  getProduct(productId){
 
-    let urll = "http://192.168.13.241:8282/financeproject/getProductDetails/"+productId;
+    let urll = this.CommanUrl+"/getProductDetails";
   
-    console.log(this.http.get(urll));
-    return this.http.get(urll)
+   // console.log(this.http.get(urll));
+    return this.http.post(urll,productId)
     }
 
 
-    getProductDetails(){
+    getProductDetails(product:Product){
 
-      let urll = "http://192.168.13.241:8282/financeproject/getProductDetails/";
+      let urll = this.CommanUrl+"/getProductDetailsByType";
     
-      console.log(this.http.get(urll));
-      return this.http.get(urll)
+     // console.log(this.http.get(urll));
+      return this.http.post(urll,product);
+  
+      
       }
 
 
@@ -56,8 +60,34 @@ export class RegService {
         //   console.log(data);
         // })
       }
+    userData1;
+      schedules(userData1){
+        console.log(userData1);
+        
+        let url="http://192.168.13.241:8282/financeproject/schedules";
+    return this.http.post(url,userData1);
+ 
+         // sessionStorage.setItem('username',user.userName);
+          //sessionStorage.setItem('password',user.password);
+        //   console.log(data);
+        // })
+      }
+
+      buyproducts(user:User){
+        let url="http://192.168.13.241:8282/financeproject/buyProducts";
+        return this.http.post(url,user);
+ 
+      }
     
     
+    
+        addPayment(purchase:Purchase){
+          let url = "http://192.168.13.241:8282/financeproject/purchaseProduct";
+          this.http.post(url,purchase).subscribe((data)=>{
+            console.log(data);
+          })
+        }
+
 
   }
 
