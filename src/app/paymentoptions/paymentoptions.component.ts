@@ -12,7 +12,8 @@ export class PaymentoptionsComponent implements OnInit {
 
   ngOnInit(): void {
   }
- emi1(){
+  
+ emioptions(){
   this.router.navigate(['emi1'])
  }
 }

@@ -1,35 +1,39 @@
-
-
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-input[type=text],input[type=tel], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+.bg-img
+{
+    background-image: url('/assets/put1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
 }
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.call{
+    margin-left:400px;
+    margin-top: 50px;
 }
-
-input[type=submit]:hover {
-  background-color: #45a049;
+.mail{
+    margin-left:400px;
+    margin-top: 10px;
 }
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.address{
+    margin-left:400px;
+    margin-top: 10px;
 }
-
+p{
+    font-size: 25px;
+    margin-left:600px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mobile{
+    color:whitesmoke;
+    margin-left: 10px;
+}
+.mailid{
+    color:whitesmoke;
+    margin-left: 10px;
+   font-family: serif;
+    font-size: 18px
+}
+.add{
+    color:whitesmoke;
+    margin-left: 10px;
+}

@@ -1,0 +1,27 @@
+.catagory{
+    margin-top: 4%;
+  }
+  
+
+  .sport{
+    margin-left: 34%;
+}
+.laptops{
+    margin-left: 34%;
+}
+.mobiles{
+    margin-left: 34%;
+}
+
+  .sport:hover {
+     
+      transform: scale(1.2);
+    }
+    
+    .mobiles:hover {
+      transform: scale(1.2);
+    }
+    
+    .laptops:hover {
+      transform: scale(1.2);
+    }
