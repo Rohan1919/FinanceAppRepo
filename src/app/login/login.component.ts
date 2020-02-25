@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   userData;
   userData1;
   userData2;
+  user;
   constructor( private service : RegService,private router:Router) { }
    login:Login=new Login();
    
@@ -30,12 +31,17 @@ export class LoginComponent implements OnInit {
   this.userData = JSON.stringify(data.userName)
   this.userData1 = JSON.stringify(data.userId)
   this.userData2= JSON.stringify(data.limit)
+  alert(JSON.stringify(data.userName))
+  
+ 
 
   if(this.userData1!=-1){
-      sessionStorage.setItem("userName",this.userData);
-      sessionStorage.setItem("userId",this.userData1);
-      sessionStorage.setItem("limit",this.userData2);
+      sessionStorage.setItem("userName",this.userData)
+      sessionStorage.setItem("userId",this.userData1)
+      sessionStorage.setItem("limit",this.userData2)
 
+      this.user=sessionStorage.getItem("userId")
+      
       alert("welcome user")
       this.router.navigate(['dashboard']);
     }

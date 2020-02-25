@@ -6,12 +6,12 @@
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" >
             <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <input type="text" id="ccnum" name="cardnumber"  [(ngModel)]=purchase.pCardNo  placeholder="1111-2222-3333-4444">
             <label for="expmonth">Exp Date</label>
             
-            <input type="text" id="expyear" name="expyear" >
+            <input type="date" id="expyear"  [(ngModel)]=purchase.expryDate  name="expyear" >
             <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv" >
+            <input type="text" id="cvv"  [(ngModel)]=purchase.cvv  name="cvv" >
           </div>
        
       </form>
