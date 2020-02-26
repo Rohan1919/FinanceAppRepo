@@ -8,7 +8,15 @@
  </div>
     <form style>
       <form action="home.component.html" >
-      <div class="abc">
+      
+
+       
+    <label class="abc" for="productid"><b>Product Id</b></label><br/>
+    <div class="container">
+    <input  type="number"  placeholder="Enter Product Id" [(ngModel)]=product.productId  name="Productid" required><br/>
+    </div>
+    
+    <div class="abc">
     <label for="name"  ><b>Product Name</b></label><br/></div>
 <div class="container">
     <input  type="text"  placeholder="Enter Product Name" [(ngModel)]=product.productName name="productname"  required><br/>
@@ -35,8 +43,14 @@
    
    <label class="abc" for="url"><b>Image url</b></label><br/>
    <div  class="container">
-    <input  type="text"  placeholder="Enter Image url" name="url" required><br/>
+    <input  type="text"  placeholder="Enter Image url"  [(ngModel)]=product.productUrl name="url" required><br/>
     </div>
+
+    <label class="abc" for="type"><b>Product Type</b></label><br/>
+    <div  class="container">
+     <input  type="text"  placeholder="Enter type as laptop/mobile/sport"  [(ngModel)]=product.productType name="type" required><br/>
+     </div>
+
     
 <div class="container">
     <button type="submit" (click)="productsubmit()" class="registerbtn">Submit</button><br/>

@@ -45,7 +45,7 @@ body{
   /* Create three equal columns that floats next to each other */
   .column {
     float: left;
-    width: 33.33%;
+    width:99%;
     padding: 10px;
     padding-bottom: 250px;
     height: 500px; /* Should be removed. Only for demonstration */
@@ -59,3 +59,9 @@ body{
     clear: both;
     
   }
+
+  .row{
+    float: left;
+    
+  }
+  

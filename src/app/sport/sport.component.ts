@@ -15,7 +15,7 @@ export class SportComponent implements OnInit {
   constructor(private http: HttpClient, private service: RegService,private router:Router) { }
  
    ngOnInit(){
-     this.product.productType = "sports"
+     this.product.productType = "sport"
     this.service.getProductDetails(this.product).subscribe(data=> {
        this.productList =data;
        console.log(data)
@@ -32,6 +32,10 @@ export class SportComponent implements OnInit {
           sessionStorage.setItem('productId',data.productId.toString())
           sessionStorage.setItem('productName',data.productName.toString())
           sessionStorage.setItem('productPrice',data.price.toString())
+          sessionStorage.setItem('productUrl',data.productUrl.toString())
+          sessionStorage.setItem('productDetails',data.productDetails.toString())
+
+
  
           this.router.navigate(['productdetail'])
         });

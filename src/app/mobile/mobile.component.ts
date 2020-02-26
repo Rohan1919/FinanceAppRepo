@@ -39,6 +39,9 @@ export class MobileComponent implements OnInit {
           sessionStorage.setItem('productId',data.productId.toString())
           sessionStorage.setItem('productName',data.productName.toString())
           sessionStorage.setItem('productPrice',data.price.toString())
+          sessionStorage.setItem('productDetails',data.productDetails.toString())
+
+          
  
           this.router.navigate(['productdetail'])
         });
