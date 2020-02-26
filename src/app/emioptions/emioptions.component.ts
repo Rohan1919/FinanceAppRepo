@@ -28,7 +28,7 @@ export class EmioptionsComponent implements OnInit {
   }
   payment(){
 
-    sessionStorage.setItem("tperiod",this.purchase.tenturePeriod)
+    sessionStorage.setItem("tperiod",(this.purchase.tenturePeriod).toString())
     this.router.navigate(['payment'])
 
   }

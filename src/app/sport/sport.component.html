@@ -5,10 +5,11 @@
   <div class="row">
     <div class="column" >
       <div class="card" style="text-align:center;">
-        <img src="assets/lap4.jpeg" style="width:100%">
-        <h3 style="text-align: center;">{{product.pname}}</h3>
+        <img src={{product.productUrl}} style="width:120px; height: 200px;">
+        <h3 style="text-align: center;">{{product.productName}}</h3>
         <p class="price">Rs{{product.price}}</p>
-        <p>{{product.productDetails}}</p>
+      
+
   
       <p><button (click)="details(product.productId)">View Product</button></p>
     </div>

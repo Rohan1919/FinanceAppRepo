@@ -14,30 +14,31 @@ import { Purchase } from './purchase';
 export class RegService {
 
   constructor(private http:HttpClient) { }
-
+  CommanUrl:String="http://localhost:8383/financeproject";
   addUser(user:User){
-    let url = "http://192.168.13.241:8282/financeproject/registration";
+    let url = this.CommanUrl+"/registration";
     this.http.post(url,user).subscribe((data)=>{
       console.log(data);
+
     })
   }
 
 
-  CommanUrl:String="http://192.168.13.241:8282/financeproject";
+ 
   
-  getProduct(productId){
+  getProduct(product:Product){
 
     let urll = this.CommanUrl+"/getProductDetails";
   
    // console.log(this.http.get(urll));
-    return this.http.post(urll,productId)
+    return this.http.post(urll,product)
     }
 
 
     getProductDetails(product:Product){
 
       let urll = this.CommanUrl+"/getProductDetailsByType";
-    
+    console.log("from here"+JSON.stringify(product));
      // console.log(this.http.get(urll));
       return this.http.post(urll,product);
   
@@ -46,13 +47,11 @@ export class RegService {
 
 
       addProd(product:Product){
-        let url = "http://192.168.13.241:8282/financeproject/setProductDetails";
-        this.http.post(url,product).subscribe((data)=>{
-          console.log(data);
-        })
+        let url = this.CommanUrl+"/setProductDetails";
+        return this.http.post(url,product);
       }
       login(login:Login){
-        let url="http://192.168.13.241:8282/financeproject/login";
+        let url=this.CommanUrl+"/login";
     return this.http.post(url,login);
  
          // sessionStorage.setItem('username',user.userName);
@@ -62,10 +61,10 @@ export class RegService {
       }
     userData1;
       schedules(userData1){
-        console.log(userData1);
+        console.log("user data =====>>>",userData1);
         
-        let url="http://192.168.13.241:8282/financeproject/schedules";
-    return this.http.post(url,userData1);
+        let url=this.CommanUrl+"/schedules";
+        return this.http.post(url,userData1);
  
          // sessionStorage.setItem('username',user.userName);
           //sessionStorage.setItem('password',user.password);
@@ -74,20 +73,25 @@ export class RegService {
       }
 
       buyproducts(user:User){
-        let url="http://192.168.13.241:8282/financeproject/buyProducts";
+        let url=this.CommanUrl+"/buyProducts";
         return this.http.post(url,user);
  
       }
     
     
-    
-        addPayment(purchase:Purchase){
-          let url = "http://192.168.13.241:8282/financeproject/purchaseProduct";
-          this.http.post(url,purchase).subscribe((data)=>{
+      
+        addPayment(purchasedata:Purchase){
+          console.log("I'm in purchase");
+          
+          let url = "http://localhost:8383/financeproject/purchaseProduct";
+          
+          this.http.post(url,purchasedata).subscribe((data)=>{
             console.log(data);
+      
           })
-        }
+      //  this.http.post(url,purchasedata);
 
 
   }
 
+}

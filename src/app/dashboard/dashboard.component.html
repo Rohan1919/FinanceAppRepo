@@ -1,30 +1,25 @@
 
+<!--
 <div class="welcome">
-    <h3><p>welcome {{customer.customerName}}</p></h3>
+    <h3><p>welcome {{userData}}</p></h3>
 </div>
+
+
 
 <div class="title">
     <h2>Dash Board</h2>
 </div>
 
 
-<div class="card1" *ngIf="cardActive">
-    <h3>Purchase Card</h3>
-    <h4>{{card.cardNumber}}</h4><br><br><br>
-    <h4>{{cardType.cardType}}</h4>
-   
-
-</div>
 
 
 
 
-
-<div class="row" *ngIf="cardActive">
+<div class="row" >
     <div class="column">
         <div class="card">
             <h3>Total Credit </h3>
-            <p>{{cardType.cardLimit}}</p>
+            <p>{{userData2}}</p>
 
         </div>
     </div>
@@ -32,7 +27,7 @@
     <div class="column">
         <div class="card">
             <h3>Remaining Credit</h3>
-            <p>{{card.creditUsed}}</p>
+            <p>{{userData3}}</p>
 
         </div>
     </div>
@@ -50,16 +45,16 @@
     <table>
         <tr>
             <th>Product </th>
-            <th>Start Date</th>
-            <th>End Date</th>
+            <th>Product Price</th>
+            <th></th>
             <th>Amount Paid</th>
         </tr>
-        <tr *ngFor="let emi of emiList">
-               <td> {{emi.product.productName}}</td>
-               <td> {{emi.emiStartDate}}</td>
+        <tr >
+               <td> {{productName}}</td>
+               <td> {{price}}</td>
                <td> {{emi.emiEndDate}}</td>
                 <td> {{emi.totalAmountPaid}}</td>
-                <td> <button (click)="payEmi(emi)"> Pay Emi </button> </td>
+               
         </tr>
         
     </table>
@@ -73,19 +68,15 @@
 <div class="recentTransactions">
     <table>
         <tr>
-            <th>Product </th>
+            <th>Transaction Id </th>
             <th>Date</th>
             <th>Amount Paid</th>
         </tr>
-        <tr *ngFor=>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+       
         <tr>
-            <td>add</td>
-            <td>sub</td>
-            <td >122<button (click)="actualpay()" >pay</button></td>
+            <td></td>
+            <td></td>
+            <td ><button (click)="actualpay()" >pay</button></td>
         </tr>
         <tr>
             <td></td>
@@ -97,13 +88,10 @@
             <td></td>
             <td></td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+      
     </table>
 
 </div>
 
-
+-->
+<p>Commnted code </p>
